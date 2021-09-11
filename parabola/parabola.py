@@ -6,7 +6,7 @@ fig = plt.figure()
 fig.patch.set_facecolor('black')
 ax = plt.axes(xlim = (-1,4), ylim = (-1,3))
 ax.patch.set_facecolor('black')
-line, = ax.plot([], [], lw = 2)
+line, = ax.plot([], [], lw = 1)
 
 
 def init():
@@ -20,5 +20,5 @@ def animate(i):
     return line,
 
 anim = animation.FuncAnimation(fig, animate, init_func = init, 
-frames = 200, interval = 20, blit = True)
+                                frames = 200, interval = 20, blit = True)
 plt.show()
